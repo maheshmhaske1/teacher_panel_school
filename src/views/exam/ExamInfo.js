@@ -29,6 +29,7 @@ function ExamInfo() {
   const [examQuestionData, setQuestionExamData] = useState([]);
   const [examDataForPrint, setExamDataForPrint] = useState({});
   const [isCertificateModalOpen, setIsCertificateModalOpen] = useState(false)
+  // const [isExamDone, setIsExamDone] = useState(false);
 
 
   useEffect(() => {
@@ -202,7 +203,7 @@ function ExamInfo() {
         </> : ""
       }
       <ExamWidget data={examData}></ExamWidget>
-      <AddStudent updateData={updateData} ></AddStudent>
+      <AddStudent updateData={updateData} isExamDone={isExamDone} ></AddStudent>
       <DataTable columns={columns} data={data} />
       {isCertificateModalOpen ? <CertificateGenerator data={examDataForPrint} setIsCertificateModalOpen={setIsCertificateModalOpen} /> : ''}
     </div>

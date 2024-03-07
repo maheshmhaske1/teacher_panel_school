@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function AddStudent({ updateData }) {
+function AddStudent({ updateData, isExamDone }) {
 
     const { id } = useParams();
     const orgId = Cookies.get("organizationId");
@@ -93,7 +93,8 @@ function AddStudent({ updateData }) {
                 <div className="col-6 my-3">
                     <h3>Exam Student Info</h3>
                 </div>
-                <div className="col-6 my-3 text-end">
+
+                {!isExamDone ? <> <div className="col-6 my-3 text-end">
                     <button
                         type="button"
                         className="btn btn-primary"
@@ -101,7 +102,8 @@ function AddStudent({ updateData }) {
                     >
                         Add Student
                     </button>
-                </div>
+                </div></> :null}
+               
                 <hr />
             </div>
 
