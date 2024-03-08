@@ -4,7 +4,7 @@ import Cookies from 'js-cookie'
 // const BASE_URL = 'http://localhost:5000'
 
 
-const BASE_URL = 'http://66.179.250.128:5000'
+const BASE_URL = 'http://66.179.250.128:5000/api'
 
 
 export const axiosInstance = axios.create({
