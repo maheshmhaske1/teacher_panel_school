@@ -61,7 +61,7 @@ const DataTable = ({ columns, data, name }) => {
           />
           <span className="search-icon">&#x1F50D;</span>
         </div>
-        <Button onClick={() => downloadExcel()} variant="success" style={{ color: 'white' }}>
+        <Button onClick={() => downloadExcel()} className='download_excel' variant="success" style={{ color: 'white' }}>
           Download Excel
         </Button>
       </div>
