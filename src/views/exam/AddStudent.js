@@ -91,7 +91,7 @@ function AddStudent({ updateData, isExamDone }) {
         <div className="container bg-white">
             <div className="row">
                 <div className="col-6 my-3">
-                    <h3>Exam Student Info</h3>
+                    <h3>Exam Student Information</h3>
                 </div>
 
                 {!isExamDone ? <> <div className="col-6 my-3 text-end">
